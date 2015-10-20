@@ -8,15 +8,15 @@ import android.widget.Toast;
  * Created by sbastin on 10/15/15.
  */
 public class SnackbarPizzaCallback extends Snackbar.Callback {
-    private Context mContext;
+    private Context context;
 
     public SnackbarPizzaCallback(Context context){
-        mContext = context;
+        this.context = context;
     }
     @Override
     public void onDismissed(Snackbar snackbar, int event) {
         if(event == Snackbar.Callback.DISMISS_EVENT_TIMEOUT){
-            Toast.makeText(mContext, "You snooze, you lose, Brochacho.", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "You snooze, you lose, Brochacho.", Toast.LENGTH_LONG).show();
         }
     }
 }

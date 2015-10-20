@@ -21,12 +21,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 
+import java.util.ArrayList;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import example.nerdery.supportlibrarydemo.R;
 import example.nerdery.supportlibrarydemo.adapters.ViewPagerAdapter;
 import example.nerdery.supportlibrarydemo.callbacks.SnackbarPizzaCallback;
+import example.nerdery.supportlibrarydemo.callbacks.SubFabSnackbarCallback;
 import example.nerdery.supportlibrarydemo.listeners.ChainedAnimationListener;
 import example.nerdery.supportlibrarydemo.listeners.SnackbarActionListener;
 
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.fab_sub3) FloatingActionButton mFabSub3;
 
     private boolean areSubFabsVisible;
+    private ArrayList<FloatingActionButton> subFabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,19 +102,30 @@ public class MainActivity extends AppCompatActivity {
             closeSubFabs();
             areSubFabsVisible = false;
         }
-
     }
 
     @OnClick(R.id.fab_sub1) void fabSub1Click(){
-
+        Snackbar
+                .make(mCoordinatorLayout, "You gonna eat that last slice of 'za?", Snackbar.LENGTH_LONG)
+                .setAction("Yes", new SnackbarActionListener(MainActivity.this))
+                .setCallback(new SubFabSnackbarCallback(mCoordinatorLayout,subFabs, MainActivity.this))
+                .show();
     }
 
     @OnClick(R.id.fab_sub2) void fabSub2Click(){
-
+        Snackbar
+                .make(mCoordinatorLayout, "You gonna eat that last slice of 'za?", Snackbar.LENGTH_LONG)
+                .setAction("Yes", new SnackbarActionListener(MainActivity.this))
+                .setCallback(new SubFabSnackbarCallback(mCoordinatorLayout,subFabs, MainActivity.this))
+                .show();
     }
 
     @OnClick(R.id.fab_sub3) void fabSub3Click(){
-
+        Snackbar
+                .make(mCoordinatorLayout, "You gonna eat that last slice of 'za?", Snackbar.LENGTH_LONG)
+                .setAction("Yes", new SnackbarActionListener(MainActivity.this))
+                .setCallback(new SnackbarPizzaCallback(MainActivity.this))
+                .show();
     }
 
     private void showSubFabs(){
@@ -160,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeVars(){
         areSubFabsVisible = false;
+        subFabs = new ArrayList<>();
+        subFabs.add(mFabSub1);
+        subFabs.add(mFabSub2);
+        subFabs.add(mFabSub3);
     }
 
 }

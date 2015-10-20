@@ -31,6 +31,7 @@ public class SpicoliDetailsActivity extends AppCompatActivity {
     public static final String IMAGE_KEY = "IMAGE_KEY";
     public static final String TITLE_KEY = "TITLE_KEY";
     public static final String DESC_KEY = "DESC_KEY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,16 @@ public class SpicoliDetailsActivity extends AppCompatActivity {
         initializeTransitionElements();
         initializeWidgets(getIntent().getExtras());
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void initializeToolbar(){

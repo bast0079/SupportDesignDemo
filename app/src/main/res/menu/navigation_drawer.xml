@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<group>
-    <item
-        android:id="@+id/navigation_header1"
-        android:title="With Icons"
-        android:enabled="false"/>
-    <item
-        android:id="@+id/navigation_sub_item_1"
-        android:icon="@android:drawable/ic_btn_speak_now"
-        android:title="Hey, I know that dude!"/>
-    <item
-        android:id="@+id/navigation_sub_item_2"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="You hear that?  That's my skull!"/>
-</group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_subheader1"
+            android:title="With Icons">
+            <menu>
+                <item
+                    android:id="@+id/navigation_sub_item_1"
+                    android:icon="@android:drawable/ic_btn_speak_now"
+                    android:title="Hey, I know that dude!"/>
+                <item
+                    android:id="@+id/navigation_sub_item_2"
+                    android:icon="@android:drawable/ic_dialog_email"
+                    android:title="Your hear that?  That's my skull!"/>
+            </menu>
+        </item>
 
-    <item
-        android:id="@+id/navigation_header2"
-        android:title="Without Icons"
-        android:enabled="false"/>
-    <item
-        android:id="@+id/navigation_sub_item_3"
-        android:title="Hey, I know that dude!"/>
-    <item
-        android:id="@+id/navigation_sub_item_4"
-        android:title="Whoa, I have no icon"/>
+        <item
+            android:id="@+id/navigation_subheader2"
+            android:title="Without Icons">
+            <menu>
+                <item
+                    android:id="@+id/navigation_sub_item_3"
+                    android:title="Hey, I know that dude!"/>
+                <item
+                    android:id="@+id/navigation_sub_item_4"
+                    android:title="Whoa, I have no icon"/>
+            </menu>
+        </item>
 
-    <item
-        android:id="@+id/navigation_header3"
-        android:title="With and without Icons"
-        android:enabled="false"/>
-    <item
-        android:id="@+id/navigation_sub_item_5"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="Hey, I know that dude!"
-        />
-    <item
-        android:id="@+id/navigation_sub_item_6"
-        android:title="Whoa, I have no icon"/>
+        <item
+            android:id="@+id/navigation_subheader3"
+            android:title="A Mix of Both">
+            <menu>
+                <item
+                    android:id="@+id/navigation_sub_item_5"
+                    android:icon="@android:drawable/ic_btn_speak_now"
+                    android:title="Hey, I know that dude!"/>
 
-
+                <item
+                    android:id="@+id/navigation_sub_item_6"
+                    android:title="Whoa, I have no icon"/>
+            </menu>
+        </item>
+    </group>
 </menu>

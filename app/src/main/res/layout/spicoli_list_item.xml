@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="72dp">
+
+    <ImageView
+        android:id="@+id/spicoli_list_item_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/spicoli_happy_circle" />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="16dp">
+        <TableRow>
+            <TextView
+                android:id="@+id/spicoli_list_item_title_text_view"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Title" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/spicoli_list_item_description_text_view"
+                android:textSize="14sp"
+                android:text="This is a description..."/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

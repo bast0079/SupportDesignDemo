@@ -8,4 +8,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_tab_layout">TabLayoutActivity</string>
+    <string name="title_activity_spicoli_details">SpicoliDetailsActivity</string>
+
+    <string name="image_transition">IMAGE_TRANSITION</string>
+    <string name="title_transition">TITLE_TRANSITION</string>
+    <string name="desc_transition">DESC_TRANSITION</string>
+
 </resources>

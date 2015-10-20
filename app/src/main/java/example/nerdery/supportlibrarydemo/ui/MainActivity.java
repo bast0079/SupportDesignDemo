@@ -79,13 +79,10 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         switch (menuItem.getItemId()) {
                             case R.id.navigation_sub_item_1:
-                                Snackbar
-                                        .make(mDrawerLayout, "You gonna eat that last slice of 'za?", Snackbar.LENGTH_LONG)
-                                        .setAction("Yes", new SnackbarActionListener(MainActivity.this))
-                                        .setCallback(new SnackbarPizzaCallback(MainActivity.this))
-                                        .show();
+                                mDrawerLayout.closeDrawer(mNavigationView);
                                 return true;
-
+                            case R.id.navigation_sub_item_2:
+                                mDrawerLayout.closeDrawer(mNavigationView);
                             default:
                                 return true;
                         }

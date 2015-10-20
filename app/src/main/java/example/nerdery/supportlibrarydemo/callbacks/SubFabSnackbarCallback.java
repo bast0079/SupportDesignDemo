@@ -13,12 +13,10 @@ import java.util.ArrayList;
  */
 public class SubFabSnackbarCallback extends Snackbar.Callback{
     private ArrayList<FloatingActionButton> buttons;
-    private CoordinatorLayout layout;
     private Context context;
     private int SNACKBAR_HEIGHT ;
 
     public SubFabSnackbarCallback(CoordinatorLayout layout, ArrayList<FloatingActionButton> buttons, Context context){
-        this.layout = layout;
         this.buttons = buttons;
         this.context = context;
         SNACKBAR_HEIGHT = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 48, context.getResources().getDisplayMetrics());
